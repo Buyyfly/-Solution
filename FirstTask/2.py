@@ -21,6 +21,7 @@ if sec > 60:
         hour = int(minute / 60)
         hour = proverka(hour)
         minute = minute % 60
+        sec = proverka(sec)
         minute = proverka(minute)
         out(hour, minute, sec)
     else:
@@ -30,3 +31,11 @@ if sec > 60:
 else:
     sec = proverka(sec)
     out(hour, minute, sec)
+
+s = int(input('Введите кол-во секунд:'))
+m = s // 60
+s = s % 60
+h = m // 60
+m = m % 60
+
+print(f'{h:02d}:{m:02d}:{s:02d}')
